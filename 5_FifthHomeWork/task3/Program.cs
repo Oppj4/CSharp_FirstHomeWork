@@ -12,7 +12,7 @@ double[] CreateRndDblArr(int size, int min, int max)
 
     for(int i = 0; i < size; i++)
     {
-        array[i] = Math.Round(rnd.NextDouble() * (max - min), 1);
+        array[i] = min + Math.Round(rnd.NextDouble() * (max - min), 1);
     }
     return array;
 }
@@ -48,7 +48,7 @@ double FindMax(double[] arr)
     return max;
 }
 
-double[] array = CreateRndDblArr(10, 1, 30);
+double[] array = CreateRndDblArr(12, 1, 100);
 
 PrintArray(array);
 
